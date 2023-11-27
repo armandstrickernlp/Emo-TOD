@@ -265,7 +265,7 @@ if __name__ == "__main__":
     eval_set = args.eval_data_json.split('/')[-1].split('.')[0]
 
     if eval_set == 'emo_prev':
-        for eval_set in ['emo_gen', 'emo_gold']:
+        for eval_set in ['emo_gen', 'emo_gold']: # test if inserting gold labels into context improves emo gen
             output_dir = f"OUT_{model_name}/gen_outputs/{eval_set}_{args.eval_split}/{args.lr}_{args.seed}"
             generate(output_dir, eval_set)
     else:
