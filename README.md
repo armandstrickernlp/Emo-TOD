@@ -52,7 +52,7 @@ To LoRA fine-tune LLama-2 and generate outputs on eval data, run:
 
 ```
 # adapt hyperparams as needed
-python lora_train_gen.py --lr=3e-5 --train_data_dir=data/lm_data/txt_data/emo --eval_data_json=data/lm_data/emo.json --eval_split=test 
+python lora_train_gen.py --lr=3e-5 --train_data_dir=data/lm_data/txt_data/emo --eval_data_json=data/lm_data/emo.json --eval_split=valid 
 
 # OR
 sbatch launch_lora_train_gen.sh
