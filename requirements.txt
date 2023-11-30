@@ -2,9 +2,9 @@ datasets
 evaluate
 fuzzywuzzy
 git+https://github.com/Tomiinek/MultiWOZ_Evaluation.git@master
-# numpy
-# peft
-# scipy
-# scikit-learn
-# torch
-# transformers
+numpy
+peft
+scipy
+scikit-learn
+torch
+transformers
