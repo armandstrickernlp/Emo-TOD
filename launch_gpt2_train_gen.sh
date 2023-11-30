@@ -14,7 +14,7 @@
 
 # args=()
 
-# for seed in 43 45 46
+# for seed in 42 43 44 45 46
 # do 
 #     args+=("--seed ${seed}")
 # done
