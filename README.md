@@ -63,7 +63,7 @@ sbatch launch_lora_train_gen.sh
 This applies to the PREV model responses. Using a CoT approach, we prompt the model te add an emotion-aware snippet to the generated response if the predicted emotion is other than *neutral*.
 ```
 # context is passed to leverage the unaltered input context vs. the one with the inserted emotion predictions
-python refine --gen_outputs=<path_to_emo_gen_outputs> --context=<path_to_gen_outputs>
+python refine.py --gen_outputs=<path_to_emo_gen_outputs> --context=<path_to_gen_outputs>
 
 # OR
 # if submitting to a cluster with slurm, adapt the following job script and submit
