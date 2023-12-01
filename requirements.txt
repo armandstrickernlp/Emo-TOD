@@ -2,6 +2,7 @@ datasets
 evaluate
 fuzzywuzzy
 git+https://github.com/Tomiinek/MultiWOZ_Evaluation.git@master
+langchain
 numpy
 peft
 scipy
