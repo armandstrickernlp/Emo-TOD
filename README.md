@@ -1,6 +1,6 @@
 # Unifying Emotion Detection and Task-oriented Dialogue Modeling
 
-This project enhances an end-to-end task-oriented dialogue system with user emotion recognition. This task is directly inserted into the end-to-end pipeline, as an extension of the belief state, providing mutually beneficial signal for each task.  The approach builds off of [SimpleToD](https://github.com/salesforce/simpletod) and leverages annotations from the [EmoWOZ](https://zenodo.org/records/5865438) dataset.  Fine-tuning is done with LLama-2-7b-chat and GPT2.  
+This project enhances an end-to-end task-oriented dialogue system with user emotion recognition. User emotions are represented as an extension of the belief state, and jointly learning both tasks provides mutually beneficial signal.  The approach builds off of [SimpleToD](https://github.com/salesforce/simpletod) and leverages annotations from the [EmoWOZ](https://zenodo.org/records/5865438) dataset.  Fine-tuning is done with LLama-2-7b-chat and GPT2.  
 
 Additionally, predicted emotions can be used to more explicitly ground the system response, when using LLama-2-7b-chat. This can be done as a refinement step, without further training, using few-shot Chain-of-Thought prompting. 
 
