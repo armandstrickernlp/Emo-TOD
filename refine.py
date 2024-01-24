@@ -335,28 +335,26 @@ if __name__ == '__main__':
     parser.add_argument('--context', type=str)
     args = parser.parse_args()
 
-
-    # # load lora, make preds then unload
-    # tokenizer_spe = AutoTokenizer.from_pretrained(args.checkpoint_path, cache_dir=args.cache_dir)
-    # tokenizer_norm = AutoTokenizer.from_pretrained(args.model_name, cache_dir=args.cache_dir)
-
+    # use default llama2-chat for exps. 
+    # In a live eval, can load lora, generate the TOD prediction + Emo, and then disable the adapter to refine the response with few-shot prompting 
+    # tokenizer = AutoTokenizer.from_pretrained(args.checkpoint_path)
     # base_model = AutoModelForCausalLM.from_pretrained(
     #             args.model_name,
     #             cache_dir=args.cache_dir,
     #             device_map="auto",
     #         )
-    # base_model.resize_token_embeddings(len(tokenizer_spe))
+    # base_model.resize_token_embeddings(len(tokenizer))
     # peft_model = PeftModel.from_pretrained(base_model, 
     #                                         args.checkpoint_path,
     #                                         device_map="auto",
     #                                         is_training=False,
     #         )
     
-    # # make predictions .... 
+    # # make TOD + Emo predictions .... 
 
-    # # unload lora for prompting
-    # base_model = peft_model.unload()
-    # base_model.resize_token_embeddings(len(tokenizer_norm))
+    # for prompting, use context manager to disable adapter
+    # with peft_model.disable_adapter(): https://github.com/huggingface/peft/blob/main/src/peft/peft_model.py
+    #     <few-shot input prompt>
 
 
     # load model and tokenizer
