@@ -60,7 +60,7 @@ sbatch launch_lora_train_gen.sh
 
 
 ### Refine
-This applies to the PREV (aka emo_gen in our scripts) model responses. Using a CoT approach, we prompt the model te add an emotion-aware snippet to the generated response if the predicted emotion is other than *neutral*.
+This applies to the PREV (aka emo_gen in our scripts) model responses. Using a CoT approach, we prompt the model to add an emotion-aware snippet to the generated response if the predicted emotion is other than *neutral*.
 ```
 # context is passed to leverage the unaltered input context vs. the one with the inserted emotion predictions
 python refine.py --gen_outputs=<path_to_emo_gen_outputs> --context=<path_to_gen_outputs>
